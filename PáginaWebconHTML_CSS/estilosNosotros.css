@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #7F7FD5;
+
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+
+
+
+}
+
+.header {
+
+    width: 100%;
+    float: left;
+    height: 75px;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+.main {
+
+    width: 100%;
+
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+
+
+}
+
+.menu {
+    height: 100%;
+    width: 25%;
+    float: left;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    size: 30px;
+    flex-basis: 100%;
+}
+
+.dashboard {
+
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    flex-basis: 100%;
+
+
+}
+
+.fondo {
+    width: 100%;
+    height: 100%;
+    float: left;
+    color: white;
+    font-size: 30px;
+    text-align: start;
+}
+
+.fuentePalabra {
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.info {
+    text-align: justify;
+    word-wrap: break-word;
+    padding: 10px;
+    line-height: 1.7;
+
+}
+
+
+.rss {
+
+    width: 25%;
+    float: left;
+    max-width: 100%;
+    overflow-wrap: break-word;
+
+    flex-basis: 100%;
+
+}
+
+.sabias-que {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sabias-que p {
+    margin-bottom: 10px;
+
+}
+
+.sabias-que .sabias-que-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.sabias-que .sabias-que-texto {
+    font-style: italic;
+}
+
+
+
+@media (min-width: 768px) {
+    .menu {
+        flex-basis: calc(33.33% - 20px);
+        margin: 0 10px;
+    }
+
+    .dashboard {
+        flex-basis: calc(33.33% - 20px);
+        margin: 0 10px;
+    }
+
+    .rss {
+        flex-basis: calc(33.33% - 20px);
+        margin: 0 10px;
+    }
+
+}
+
+.general {
+
+    width: auto;
+    height: auto;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.menuElem {
+
+
+    justify-items: left;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    margin-left: 5px;
+    flex-wrap: wrap;
+    display: flex;
+
+
+
+}
+
+.elemento {
+    flex: 1 0 30%;
+    height: 100px;
+    border: 1px solid;
+    background-color: #3ca2a2;
+    text-align: center;
+    margin-right: 5px;
+
+}
+
+.elemento:hover {
+    transform: scale(1.1);
+    color: #3ca2a2;
+    background-color: none;
+    cursor: pointer;
+}
+
+.button {
+    margin-right: 5px;
+    border: 0;
+    border-radius: 15px;
+    background-color: #215a6d;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    text-decoration: none;
+    height: 60px;
+}
+
+.button:hover {
+    background-color: #6fc5ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+}
+
+.button:active {
+    background-color: #3d94cf;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+a:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: none;
+    cursor: pointer;
+
+
+
+}
+
+.linkMenu {
+    height: 60px;
+}
+
+.imagenes {
+    width: 35%;
+    margin-bottom: 5%;
+
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.imgPaisaje {
+    width: 200px;
+}
+
+
+
+.colorRedes {
+    color: #f2f2f2;
+}
+
+
+
+
+
+
+/* FOOTER */
+.footer {
+
+    width: 100%;
+    height: 100%;
+    background-color: #92c7a3;
+
+
+
+}
+
+
+.container {
+    width: 100%;
+    height: 200px;
+    background-color: #2d2d29;
+    color: white;
+
+}
+
+.columna {
+    display: inline-block;
+    width: 30%;
+    margin-right: 2%;
+    vertical-align: top;
+
+}
+
+.columna:last-child {
+    margin-right: 0;
+}
+
+
+.bloqueImg {
+    height: 100%;
+    margin-top: 40px;
+}
+
+.bloque {
+    width: 100%;
+    border: 1px solid;
+    height: 30%;
+
+}
+
+.bloque video {
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}

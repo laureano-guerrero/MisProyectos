@@ -1,0 +1,262 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    background: #7F7FD5;
+  
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+  
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+  
+  
+  
+  }
+  
+  .header {
+  
+    width: 100%;
+    float: left;
+    height: 65px;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    word-break: break-all;
+    margin-bottom: 20px;
+  }
+  
+  .footer {
+  
+  
+    width: 100%;
+    height: 100%;
+  
+  }
+  
+  .container {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #2d2d29;
+    color: white;
+  }
+  
+  .columna {
+    display: inline-block;
+    width: 30%;
+    margin-right: 2%;
+    vertical-align: top;
+  
+  }
+  
+  .columna:last-child {
+    margin-right: 0;
+  }
+  
+  .main {
+  
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  
+  
+  
+  }
+  
+  .menu {
+  
+    width: 25%;
+    float: left;
+    margin-top: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    size: 30px;
+    flex-basis: 100%;
+  
+  }
+  
+  .dashboard {
+  
+    width: 60%;
+    height: 100%;
+    float: left;
+    background-color: antiquewhite;
+    flex-basis: 100%;
+    border-radius: 20px;
+    display: flex;
+    padding: 20px;
+  
+  
+  
+  }
+  
+  .imagenes {
+    width: 100%;
+    height: 100%;
+    display: grid;
+  
+    margin-bottom: 5%;
+  
+  }
+  
+  .columnaImg {
+  
+    margin-right: 10px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+  
+  .columnaImg:last-child {
+    margin-right: 0;
+    /* No añadir margen derecho a la última columna */
+  }
+  
+  .rss {
+    background-color: #dfece6;
+    width: 25%;
+  
+    float: left;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    overflow: auto;
+    flex-basis: 100%;
+    border-radius: 20px;
+  
+  
+  
+  }
+  
+  .general {
+  
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+  }
+  
+  .menuElem {
+  
+  
+    justify-items: left;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+    margin-left: 5px;
+    flex-wrap: wrap;
+    display: flex;
+  
+  
+  }
+  
+  .elemento {
+    flex: 1 0 30%;
+    height: 100px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .contenedor {
+      flex-direction: column;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .menu {
+      flex-basis: calc(20% - 20px);
+      margin: 0 10px;
+    }
+  
+    .dashboard {
+      flex-basis: calc(50% - 20px);
+      margin: 0 10px;
+    }
+  
+    .rss {
+      flex-basis: calc(30% - 20px);
+      margin: 0 10px;
+    }
+  
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  a:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: none;
+    cursor: pointer;
+  
+  
+  }
+  
+  .linkMenu {
+    height: 60px;
+  }
+  
+  
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+  }
+  
+  img:hover {
+    transform: scale(1.25);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  
+  }
+  
+  .info {
+    text-align: justify;
+    word-wrap: break-word;
+    padding: 30px;
+    font-size: 20px;
+  
+  }
+  
+  .colorRedes {
+    color: #f2f2f2;
+  }
+  
+  
+  
+  .button {
+    margin-right: 5px;
+    border: 0;
+    border-radius: 15px;
+    background-color: #215a6d;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    text-decoration: none;
+    height: 60px;
+  }
+  
+  .button:hover {
+    background-color: #6fc5ff;
+    box-shadow: 0 0 20px #6fc5ff50;
+  }
+  
+  .button:active {
+    background-color: #3d94cf;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+  }

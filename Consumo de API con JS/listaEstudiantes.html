@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Lista de Estudiantes</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/home.png" style="padding-left: 15%; width: 30%; height: 30%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item dropdown ">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+                Listas
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="listarCursos.html">Lista de Cursos</a></li>
+                <li><a class="dropdown-item" href="listaEstudiantes.html">Lista de Estudiantes</a></li>
+                <li><a class="dropdown-item" href="listaProfesores.html">Lista de Profesores</a></li>
+                <li><a class="dropdown-item" href="listaGrupos.html">Lista de Grupos</a></li>
+                <li><a class="dropdown-item" href="listaUsuarios.html">Lista de Usuarios</a></li>
+                <li><a class="dropdown-item" href="listaEstudiantesGrupo.html">Lista de Estudiantes-Grupo</a></li>
+                <li><a class="dropdown-item" href="listaProfesoresGrupo.html">Lista de Profesores-Grupo</a></li>
+                
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    
+        <h2>Lista de Estudiantes</h2>
+
+    <div class="table-responsive">
+        <table class="table table-striped able-hover table-borderless table-primary align-middle">
+
+            <thead class="table-light">
+                <caption>Table Name</caption>
+                <tr>
+                    <th>ID</th>
+                    <th>Cédula</th>
+                    <th>Correo Electrónico</th>
+                    <th>Teléfono</th>
+                    <th>Teléfono Celular</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Sexo</th>
+                    <th>Dirreccion</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Nacionalidad</th>
+                    <th>IdCarrera</th>
+                    <th>Usuario</th>
+                </tr>
+                </thead>
+
+                <tbody class="table-group-divider" id="resultados">
+                  <!-- la función llena la tabla -->
+                </tbody>
+                <tfoot></tfoot>
+        </table>
+    </div>
+    
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+<script>
+
+  //declaración de variables para empezar a trabajar en javascript
+  var contenidoTablaResultado = document.querySelector('#resultados');
+
+  function CargarDatosEstudiantes() {
+    fetch("https://paginas-web-cr.com/ApiPHP/apis/ListaEstudiantes.php")
+      .then((respuesta) => respuesta.json()) //pedimos datos con esta url y el then recibe los  datos
+      .then((datosrespuesta) => { //transforma los datos
+        setTable(datosrespuesta.data) //lo envio a la función para darle tratamiento
+      })
+      .catch(console.log);
+  }
+
+  function setTable(datos){
+      console.log('datos', datos); //muestra en consola solamente, es como un JOptionPane
+
+      for (const valor of datos) {
+          console.log('valor:', valor);
+          contenidoTablaResultado.innerHTML += `
+
+          <tr class="table-light" >
+              <td scope="row">${valor.id}</td>
+              <td>${valor.cedula}</td>
+              <td>${valor.correoelectronico}</td>
+              <td>${valor.telefono}</td>
+              <td>${valor.telefonocelular}</td>
+              <td>${valor.fechanacimiento}</td>
+              <td>${valor.sexo}</td>
+              <td>${valor.direccion}</td>
+              <td>${valor.nombre}</td>
+              <td>${valor.apellidopaterno}</td>
+              <td>${valor.apellidomaterno}</td>
+              <td>${valor.nacionalidad}</td>
+              <td>${valor.idCarreras}</td>
+              <td>${valor.usuario}</td>
+            </tr> `;
+          
+      }
+  }
+  
+  CargarDatosEstudiantes();
+</script>
+
+</html>

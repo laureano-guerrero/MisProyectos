@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lista de Cursos</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="img/home.png" style="padding-left: 15%; width: 30%; height: 30%;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown ">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                    Listas
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="listarCursos.html">Lista de Cursos</a></li>
+                    <li><a class="dropdown-item" href="listaEstudiantes.html">Lista de Estudiantes</a></li>
+                    <li><a class="dropdown-item" href="listaProfesores.html">Lista de Profesores</a></li>
+                    <li><a class="dropdown-item" href="listaGrupos.html">Lista de Grupos</a></li>
+                    <li><a class="dropdown-item" href="listaUsuarios.html">Lista de Usuarios</a></li>
+                    <li><a class="dropdown-item" href="listaEstudiantesGrupo.html">Lista de Estudiantes-Grupo</a></li>
+                    <li><a class="dropdown-item" href="listaProfesoresGrupo.html">Lista de Profesores-Grupo</a></li>
+                    
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        
+        <h2>Lista de Cursos</h2>
+        <div class="table-responsive">
+          <table
+            class="table table-striped table-hover table-borderless table-primary align-middle"
+          >
+            <thead class="table-light">
+              <caption>
+                Lista de Cursos
+              </caption>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Tiempo</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider" id="resultados">
+              <!-- la función llena la tabla -->
+            </tbody>
+            <tfoot></tfoot>
+          </table>
+        </div>
+      </main>
+      <footer>
+        <!-- place footer here -->
+      </footer>
+     
+      <!-- Modal trigger button -->
+<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+  Launch
+</button>
+
+<!-- Modal Body -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitleId">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="formulario">
+          <div class="mb-3">
+            <input type="hidden" id="id" name="id">
+            <label for="" class="form-label">Nombre</label>
+            <input type="text"
+              class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Nombre del curso">
+            <small id="helpId" class="form-text text-muted">Ingresa el nombre del curso</small>
+          </div>
+          <div class="mb-3">
+              <label for="" class="form-label">Descripcion</label>
+              <input type="text"
+                class="form-control" name="descripcion" id="descripcion" aria-describedby="helpId" placeholder="Descripcion del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa la Descripcion del curso</small>
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Tiempo</label>
+              <input type="text"
+                class="form-control" name="tiempo" id="tiempo" aria-describedby="helpId" placeholder="Tiempo del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa el Tiempo del curso</small>
+            </div>         
+            <div class="mb-3">
+              <button type="reset" class="btn btn-danger">Reset</button>
+              <button type="submit" class="btn btn-primary">Crear</button>
+
+            </div>                         
+      </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+  <script>
+
+    //declaración de variables y objetos
+    var contenidoTablaResultado = document.querySelector('#resultados');
+    const myModal = new bootstrap.Modal(document.getElementById('modalId'));
+    var formulario = document.getElementById('formulario');
+
+
+    formulario.addEventListener('submit', function(e) {
+        e.preventDefault();
+      alert('salvando');
+       var id = document.getElementById('id').value;
+       var nombre = document.getElementById('nombre').value;
+       var descripcion = document.getElementById('descripcion').value;
+       var tiempo = document.getElementById('tiempo').value;
+
+
+//       //  apis/ActualizarCursos.php
+// // { "id":3, "nombre":"React 22",
+//  "descripcion":"React Junior", 
+//  "tiempo":"10 Meses",
+
+        var datosenviar = {
+            id: id,
+            nombre:nombre,
+            descripcion:descripcion,
+            tiempo:tiempo,
+            usuario:'profesor Mario' 
+        }
+        // console.log(datosenviar);
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/ActualizarCursos.php",
+        {
+            method:"POST",
+            body:JSON.stringify(datosenviar)
+        })//url de peticion de datos
+        .then(respuesta => respuesta.json())//recibe los datos en formato json
+        .then((datosrepuesta) => {    
+            window.location = 'listarCursos.html'        
+             console.log('Datos',datosrepuesta)//Muestra el resultado de la peticion
+        })
+        .catch(console.log)//muestra errores
+    });
+
+    function CargarDatosCursos() {
+      fetch("https://paginas-web-cr.com/ApiPHP/apis/ListaCurso.php")
+        .then((respuesta) => respuesta.json()) //pedimos datos con esta url y el then recibe los  datos
+        .then((datosrespuesta) => { //transforma los datos
+          setTable(datosrespuesta.data) //lo envio a la función para darle tratamiento
+        })
+        .catch(console.log);
+    }
+
+    function setTable(datos){
+        console.log('datos', datos); //muestra en consola solamente, es como un JOptionPane
+
+        for (const valor of datos) {
+            console.log('valor:', valor);
+            contenidoTablaResultado.innerHTML += `
+
+            <tr class="table-light" >
+                <td scope="row">${valor.id}</td>
+                <td>${valor.nombre}</td>
+                <td>${valor.descripcion}</td>
+                <td>${valor.tiempo}</td>
+              
+              <td>
+                <a name="" id="" class="btn btn-danger" onclick="eliminar('${valor.id}')" role="button">Borrar</a>
+                  ||
+                <a name="" id="" class="btn btn-primary" onclick="editar('${valor.id}', '${valor.nombre}', '${valor.descripcion}', '${valor.tiempo}')" role="button">Editar</a>
+               </td>
+
+              </tr> `;
+        }
+    }
+
+    function editar(id, nombre, descripcion, tiempo){
+      myModal.show();
+      document.getElementById('nombre').value = nombre;
+      document.getElementById('descripcion').value = descripcion;
+      document.getElementById('tiempo').value = tiempo;
+      document.getElementById('id').value = id;
+
+    }
+
+    function eliminar(id){
+      alert('eliminar'+id);
+    var datosenviar = {
+            id: id
+        }
+        // console.log(datosenviar);
+        fetch("https://paginas-web-cr.com/ApiPHP/apis/BorrarCursos.php",
+        {
+            method:"POST",
+            body:JSON.stringify(datosenviar)
+        })//url de peticion de datos
+        .then(respuesta => respuesta.json())//recibe los datos en formato json
+        .then((datosrepuesta) => {    
+            alert(datosrepuesta.data)     
+             console.log('Datos',datosrepuesta)//Muestra el resultado de la peticion
+        })
+        .catch(console.log)//muestra errore
+  }
+
+    
+    CargarDatosCursos();
+  </script>
+</html>
